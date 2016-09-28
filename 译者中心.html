@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>INSPINIA | Layouts</title>
+
+    <link href="../Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../Bootstrap/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="../Bootstrap/css/animate.css" rel="stylesheet">
+    <link href="../Bootstrap/css/style.css" rel="stylesheet">
+
+    <style>
+
+        /*顶部样式*/
+        .toppest{
+            color: darkgrey;
+            padding-right: 20px
+        }
+
+        #div1 li:hover{
+            border-bottom-style: solid;
+            border-bottom-color: #1cc09f;
+            /*这一项会变黑，但并不是这里面的字*/
+            /*color: #1a2d41;*/
+        }
+        #preBtn button{
+            align-content: center;
+
+        }
+
+        /*鼠标华到这让字也变色*/
+        span em{
+            color: #a7b1c2;
+        }
+        span:hover em{
+            color: #1cc09f;
+        }
+        a:hover em{
+            color: #1cc09f;
+        }
+
+        /*修改整片页的格的内距貌似不可以，但是可以影响字体颜色*/
+        td{
+            color: darkgrey;
+            /*padding: 15px;*/
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-circle" src="../Bootstrap/img/profile_small.jpg" />
+                             </span>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear">
+                                <span class="block m-t-xs" style="padding-left: 4px"> <strong class="font-bold">陈海滨</strong>
+                                    <span class="text-muted " style="margin-left: 10px">
+                                    <b class="caret" style="padding-bottom: 9px">
+                                    </b>
+                                </span>
+                             </span>
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="contacts.html">Contacts</a></li>
+                            <li><a href="mailbox.html">Mailbox</a></li>
+                            <li class="divider"></li>
+                            <li><a href="login.html">Logout</a></li>
+                        </ul>
+                    </div>
+                    <div class="logo-element">
+                        IN+
+                    </div>
+                </li>
+
+                <!--导航栏项-->
+
+                <li class="active">
+                    <a href="layouts.html"><i class="fa-diamond"></i> <span class="nav-label">译者中心</span></a>
+                </li>
+                <li>
+                    <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">项目管理</span> <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li><a href="index.html">我的项目</a></li>
+                        <li><a href="dashboard_2.html">参与新项目</a></li>
+                        <li><a href="dashboard_3.html">我关注的项目</a></li>
+                        <!--<li><a href="dashboard_5.html">Dashboard v.5 <span class="label label-primary pull-right">NEW</span></a></li>-->
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">个人中心</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li><a href="graph_flot.html">书籍销量</a></li>
+                        <li><a href="graph_morris.html">稿酬结算</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="metrics.html"><i class="fa fa-pie-chart"></i> <span class="nav-label">原创投稿</span>  </a>
+                </li>
+                <li>
+                    <a href="widgets.html"><i class="fa fa-flask"></i> <span class="nav-label">我的帖子</span></a>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+
+    <div id="page-wrapper" class="gray-bg">
+        <!--第一条-->
+        <div class="row border-bottom">
+            <!--<div class="row">-->
+            <!--顶层导航条-->
+            <!--<nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">-->
+            <!--23333-->
+            <!--用内联样式过滤处理不想要却不能修改的CSS样式-->
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0;min-height: 0">
+
+
+                <!--右边组件的开始-->
+                <ul class="nav navbar-top-links navbar-right" style=" margin-top: 5px;margin-bottom: 5px">
+                    <!--顶层导航条需要的东西-->
+                    <!--靠右的私信，站内信，退出-->
+                    <!--私信-->
+                    <li>
+                <span class="toppest"><i class="fa fa-envelope-o"></i>
+                    私信
+                </span>
+                    </li>
+                    <!--站内信-->
+                    <li>
+                <span class="toppest"><i class="fa fa-bell"></i>
+                    站内信
+                </span>
+                    </li>
+                    <!--退出-->
+                    <li>
+                <span class="toppest"><i class="fa fa-bell-slash-o"></i>
+                    退出
+                </span>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+
+
+        <div class="row wrapper border-bottom white-bg">
+            <!--第一行里的第一列-->
+            <div class="col-lg-10" style="padding-top: 10px">
+                <label style="font-size: 15px;font-weight: normal;margin-bottom: 0px">译者中心</label>
+                <br>
+                <label style="font-size: 5px;color: lightgrey;font-weight: normal">译者中心</label>
+            </div>
+            <div class="col-lg-2">
+
+            </div>
+        </div>
+        <div class="wrapper wrapper-content animated fadeInRight" style="padding-left: 15px;padding-right: 15px;padding-top: 30px">
+            <!--一大行row,4个col-->
+                <div class="row">
+                    <div class="col-lg-3 " align="center" style="padding: 12px;padding-top: 0px">
+                        <div class="white-bg">
+                            <div class="row" style="padding-top: 13px">
+                                <div class="col-lg-6" >
+                                <label style="font-size: 18px;color: darkgrey;font-weight: normal;margin-bottom: 0px">参与项目数</label>
+                            </div>
+                                <div class="col-lg-6"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12" style="padding: 0px;padding-left: 15px;padding-right: 15px">
+                                    <hr style="margin: 0px;margin-top:8px;margin-bottom: 16px">
+                                </div>
+                            </div>
+                            <div class="row">
+                            <div class="col-lg-6">
+                                <img src="../Bootstrap/img/gallery/4s.jpg" style="margin-bottom: 20px;width: 55%;height: 55%">
+                                </div>
+                                <div class="col-lg-6">
+                                    <div style="margin-left: -80px">
+                                        <label style="font-size: 40px;font-weight: 200;">93</label>
+                                        <label style="font-size: 23px">个</label>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 " align="center" style="padding: 12px;padding-top: 0px">
+                        <div class="white-bg">
+                            <div class="row" style="padding-top: 13px">
+                                <div class="col-lg-6" >
+                                    <label style="font-size: 18px;color: darkgrey;font-weight: normal;margin-bottom: 0px">
+                                        完成任务数
+                                    </label>
+                                </div>
+                                <div class="col-lg-6"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12" style="padding: 0px;padding-left: 15px;padding-right: 15px">
+                                    <hr style="margin: 0px;margin-top:8px;margin-bottom: 16px">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <img src="../Bootstrap/img/gallery/4s.jpg" style="margin-bottom: 20px;width: 55%;height: 55%">
+                                </div>
+                                <div class="col-lg-6">
+                                    <div style="margin-left: -80px">
+                                        <label style="font-size: 40px;font-weight: 200;">
+                                            771
+                                        </label>
+                                        <label style="font-size: 23px">
+                                            个
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 " align="center" style="padding: 12px;padding-top: 0px">
+                        <div class="white-bg">
+                            <div class="row" style="padding-top: 13px">
+                                <div class="col-lg-12" align="left" style="margin-left: 15px">
+                                    <label style="font-size: 18px;color: darkgrey;font-weight: normal;margin-bottom: 0px">任务完成准时率</label>
+                                </div>
+                                <div class="col-lg-6"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12" style="padding: 0px;padding-left: 15px;padding-right: 15px">
+                                    <hr style="margin: 0px;margin-top:8px;margin-bottom: 16px">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <img src="../Bootstrap/img/gallery/4s.jpg" style="margin-bottom: 20px;width: 55%;height: 55%">
+                                </div>
+                                <div class="col-lg-6">
+                                    <div style="margin-left: -80px">
+                                        <label style="font-size: 40px;font-weight: 200;">88.9</label>
+                                        <label style="font-size: 23px">%</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 " align="center" style="padding: 12px;padding-top: 0px">
+                        <div class="white-bg">
+                            <div class="row" style="padding-top: 13px">
+                                <div class="col-lg-6" style="padding-left: 0px">
+                                    <label style="font-size: 18px;color: darkgrey;font-weight: normal;margin-bottom: 0px;">
+                                        消息管理
+                                    </label>
+                                </div>
+                                <div class="col-lg-6">
+                                    <a>
+                                        <label style="margin-bottom: 0px;margin-top: 4px;font-weight: 100">
+                                            查看消息详情
+                                        </label>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12" style="padding: 0px;padding-left: 15px;padding-right: 15px">
+                                    <hr style="margin: 0px;margin-top:8px;margin-bottom: 16px">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <img src="../Bootstrap/img/gallery/4s.jpg" style="margin-bottom: 20px;width: 55%;height: 55%">
+                                </div>
+                                <div class="col-lg-6">
+                                    <div style="margin-left: -80px">
+                                        <label style="font-size: 40px;font-weight: 200;color: red">23</label>
+                                        <label style="font-size: 23px">条</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!--第二行row-->
+            <div class="row">
+                <div class="col-lg-12 " align="center" style="padding: 12px;padding-top: 0px">
+                    <div class="white-bg">
+                        <div class="row" style="padding-top: 29px;padding-left: 15px">
+                            <div class="col-lg-6" style="padding-left: 0px" align="left">
+                                <label style="font-size: 16px;color: darkgrey;font-weight: normal;margin-bottom: 0px;padding-left: 15px">
+                                    绝地反击
+                                </label>
+                            </div>
+                            <div class="col-lg-3" style="padding-right: 0px" align="right">
+                                <label style="font-size: 14px;color: darkgrey;font-weight: normal;margin-right: -30px">
+                                    2016-07-25
+                                </label>
+                            </div>
+                            <div class="col-lg-2" align="right">
+                                <label style="font-size: 14px;color: darkgrey;font-weight: normal">
+                                    初稿生成
+                                </label>
+                            </div>
+                            <div class="col-lg-1">
+                                    <i class="fa fa-angle-up" style="color: darkgrey;font-weight: normal;font-size: 28px;margin-top: -5px">
+                                    </i>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 16px">
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                            <!--1#表格-->
+                            <table class="table" style="border-style: hidden">
+                                <tbody >
+                                    <tr>
+                                        <!--第一行-->
+                                        <td style="padding: 15px">任务</td>
+                                        <td align="center" style="padding: 15px">截止时间</td>
+                                        <td align="center" style="padding: 15px"><span style="position: relative;left: 14px">状态</span></td>
+                                    </tr>
+                                    <tr>
+                                        <!--换种思路-->
+                                        <td style="width: 30%;padding: 15px">
+                                            <div>
+                                                <img src="../Bootstrap/img/gallery/4s.jpg" style="width:40px; height:40px">
+                                                <span style="margin-left: 15px">初稿生成第16章</span>
+                                            </div>
+                                        </td>
+                                        <!--空列-->
+                                        <!--<td></td>-->
+                                        <td align="center" style="padding: 15px">2016-08-26 23:00</td>
+                                        <td align="center" style="padding: 15px">
+                                            <label style="position: relative;left: 14px;color: orange;font-weight: normal">
+                                                <i class="fa fa-user"></i>
+                                                被催稿
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr style="border-style: hidden">
+                                        <td style="padding: 15px">
+                                            <div>
+                                                <img src="../Bootstrap/img/gallery/4s.jpg" style="width:40px; height:40px">
+                                                <span style="margin-left: 15px">为曾宪坤的第14章初稿生成评分</span>
+                                            </div>
+                                        </td>
+                                        <td align="center" style="padding: 15px">2016-08-26 23:00</td>
+                                        <td align="center" style="padding: 15px">
+                                            <label style="position: relative;left: 14px;color: mediumseagreen;font-weight: normal">
+                                                <i class="fa fa-user"></i>
+                                                进行中
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr style="border-style: hidden">
+                                        <td style="padding: 15px">
+                                            <div>
+                                                <img src="../Bootstrap/img/gallery/4s.jpg" style="width:40px; height:40px">
+                                                <span style="margin-left: 15px">为陈海滨的第14章初稿生成评分</span>
+                                            </div>
+                                        </td>
+                                        <td align="center"><span>系统确认该任务完成</span></td>
+                                        <td align="center" style="padding: 15px">
+                                            <label style="position: relative;left: 14px;color: orangered;font-weight: normal">
+                                                <i class="fa fa-user"></i>
+                                                被警告
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--第三段-->
+            <div class="row">
+                <div class="col-lg-12 " align="center" style="padding: 12px;padding-top: 0px">
+                    <div class="white-bg">
+                        <div class="row" style="padding-top: 29px;padding-left: 15px">
+                            <div class="col-lg-6" style="padding-left: 0px" align="left">
+                                <label style="font-size: 16px;color: darkgrey;font-weight: normal;margin-bottom: 0px;padding-left: 15px">
+                                    哥特式恐怖小说
+                                </label>
+                            </div>
+                            <div class="col-lg-3" style="padding-right: 0px" align="right">
+                                <label style="font-size: 14px;color: darkgrey;font-weight: normal;margin-right: -30px">
+                                    2016-07-25
+                                </label>
+                            </div>
+                            <div class="col-lg-2" align="right">
+                                <label style="font-size: 14px;color: darkgrey;font-weight: normal">
+                                    初稿生成
+                                </label>
+                            </div>
+                            <div class="col-lg-1">
+                                <i class="fa fa-angle-up" style="color: darkgrey;font-weight: normal;font-size: 28px;margin-top: -5px">
+                                </i>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 16px">
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <!--1#表格-->
+                                <table class="table" style="border-style: hidden">
+                                    <tbody >
+                                    <tr>
+                                        <!--第一行-->
+                                        <td style="padding: 15px">任务</td>
+                                        <td align="center" style="padding: 15px">截止时间</td>
+                                        <td align="center" style="padding: 15px"><span style="position: relative;left: 19px">状态</span></td>
+                                    </tr>
+                                    <tr>
+                                        <!--换种思路-->
+                                        <td style="width: 30%;padding: 15px">
+                                            <div>
+                                                <img src="../Bootstrap/img/gallery/4s.jpg" style="width:40px; height:40px">
+                                                <span style="margin-left: 15px">译稿精炼第16章</span>
+                                            </div>
+                                        </td>
+                                        <!--空列-->
+                                        <!--<td></td>-->
+                                        <td align="center" style="padding: 15px">延期63天15小时</td>
+                                        <td align="center" style="padding: 15px">
+                                            <label style="position: relative;left: 19px;color: orangered;font-weight: normal">
+                                                <i class="fa fa-user"></i>
+                                                被催稿
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--第四段-->
+            <div class="row">
+                <div class="col-lg-12 " align="center" style="padding: 12px;padding-top: 0px">
+                    <div class="white-bg">
+                        <div class="row" style="padding-top: 29px;padding-left: 15px">
+                            <div class="col-lg-6" style="padding-left: 0px" align="left">
+                                <label style="font-size: 16px;color: darkgrey;font-weight: normal;margin-bottom: 0px;padding-left: 15px">
+                                    在心脏病房唱约翰尼·卡什的歌——我自己关于心脏病和音乐的故事
+                                </label>
+                            </div>
+                            <div class="col-lg-3" style="padding-right: 0px" align="right">
+                                <label style="font-size: 14px;color: darkgrey;font-weight: normal;margin-right: -30px">
+                                    2016-07-25
+                                </label>
+                            </div>
+                            <div class="col-lg-2" align="right">
+                                <label style="font-size: 14px;color: darkgrey;font-weight: normal">
+                                    初稿生成
+                                </label>
+                            </div>
+                            <div class="col-lg-1">
+                                <i class="fa fa-angle-up" style="color: darkgrey;font-weight: normal;font-size: 28px;margin-top: -5px">
+                                </i>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 16px">
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <!--3#表格-->
+                                <table class="table" style="border-style: hidden;table-layout: fixed" >
+                                    <tbody >
+                                    <tr>
+                                        <!--第一行-->
+                                        <td style="padding: 15px">任务</td>
+                                        <td align="center" style="padding: 15px">截止时间</td>
+                                        <td align="center" style="padding: 15px"><span style="margin-left: 100px">状态</span></td>
+                                    </tr>
+                                    <tr>
+                                        <!--换种思路-->
+                                        <td style="width: 30%;padding: 15px">
+                                            <div>
+                                                <img src="../Bootstrap/img/gallery/4s.jpg" style="width:40px; height:40px">
+                                                <span style="margin-left: 15px">初稿生成第16章</span>
+                                            </div>
+                                        </td>
+                                        <!--空列-->
+                                        <!--<td></td>-->
+                                        <td align="center" style="padding: 15px">--</td>
+                                        <td align="center" style="padding: 15px">
+                                            <label style="position: relative;left: 14px;color: orange;font-weight: normal">
+                                                等待其他任务完成
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr style="border-style: hidden">
+                                        <td style="padding: 15px">
+                                            <div>
+                                                <img src="../Bootstrap/img/gallery/4s.jpg" style="width:40px; height:40px">
+                                                <span style="margin-left: 15px">为曾宪坤的第14章初稿生成评分</span>
+                                            </div>
+                                        </td>
+                                        <td align="center" style="padding: 15px">2016-08-26 23:00</td>
+                                        <td align="center" style="padding: 15px">
+                                            <label style="position: relative;left: 14px;color: mediumseagreen;font-weight: normal">
+                                                <i class="fa fa-user"></i>
+                                                进行中
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr style="border-style: hidden">
+                                        <td style="padding: 15px">
+                                            <div>
+                                                <img src="../Bootstrap/img/gallery/4s.jpg" style="width:40px; height:40px">
+                                                <span style="margin-left: 15px">为陈海滨的第14章初稿生成评分</span>
+                                            </div>
+                                        </td>
+                                        <td align="center"><span>系统确认该任务完成</span></td>
+                                        <td align="center" style="padding: 15px">
+                                            <label style="position: relative;left: 14px;color: orangered;font-weight: normal">
+                                                <i class="fa fa-user"></i>
+                                                被警告
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--背景板的收尾标签-->
+        </div>
+    </div>
+
+
+
+
+
+    </div>
+    <!--<div class="footer" >-->
+    <!--<div class="pull-right">-->
+    <!--10GB of <strong>250GB</strong> Free.-->
+    <!--</div>-->
+    <!--<div>-->
+    <!--<strong>Copyright</strong> Example Company &copy; 2014-2015-->
+    <!--</div>-->
+    <!--</div>-->
+
+</div>
+</div>
+
+
+
+<!-- Mainly scripts -->
+<!--<script src="../Bootstrap/js/jquery-2.1.1.js"></script>-->
+<!--<script src="../Bootstrap/js/bootstrap.min.js"></script>-->
+<!--<script src="../Bootstrap/js/plugins/metisMenu/jquery.metisMenu.js"></script>-->
+<!--<script src="../Bootstrap/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>-->
+
+<!--&lt;!&ndash; Custom and plugin javascript &ndash;&gt;-->
+<!--<script src="../Bootstrap/js/inspinia.js"></script>-->
+<!--<script src="../Bootstrap/js/plugins/pace/pace.min.js"></script>-->
+
+<!--<script src="../Bootstrap/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>-->
+
+
+</body>
+
+</html>
